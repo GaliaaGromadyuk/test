@@ -1773,4 +1773,14 @@ table .lifearea td {
     font-size: 1.1rem;
     padding: 1rem 1rem; }
     .info__title {
-      display: block; } }
+      display: block; }
+  .slider__content {
+    width: 100%;
+    padding: 0 1.8rem; }
+    .slider__content h3 {
+      font-size: 1.2rem;
+      line-height: 1.5rem; }
+    .slider__content h1 {
+      font-size: 2.4rem;
+      line-height: 2.7rem;
+      padding: 0 1.8rem; } }
