@@ -11,13 +11,13 @@ $('.slider-first').slick({
   nextArrow: ".slider-first .slider__next",
     responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
         autoplay: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 576,
       settings: {
         autoplay: false,
         arrows: false
@@ -38,13 +38,13 @@ $('.slider-second').slick({
   nextArrow: ".slider-second .slider__next",
     responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
         autoplay: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 576,
       settings: {
         autoplay: false,
         arrows: false
@@ -66,13 +66,13 @@ $('.slider-third').slick({
   nextArrow: ".slider-third .slider__next",
     responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
         autoplay: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 576,
       settings: {
         autoplay: false,
         arrows: false
@@ -93,13 +93,13 @@ $('.slider-fourth').slick({
   nextArrow: ".slider-fourth .slider__next",
     responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
         autoplay: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 576,
       settings: {
         autoplay: false,
         arrows: false
@@ -346,7 +346,7 @@ $(document).ready(function(){
     // });
 
     new fullpage('#fullpage', {
-      anchors:['Home', 'Bonefits', 'Map', 'Infrastructure', 'Apartments', 'Developer', 'Construction', 'Footer'],
+      anchors:['Home', 'Bonefits', 'Maps', 'Infrastructure', 'Apartments', 'Developer', 'Construction', 'Footer'],
     });
 
     //methods
@@ -421,6 +421,13 @@ $(document).ready(function() {
           $('#overlay').fadeOut(400);
         }
       );
+  });
+   $('.menu__icon').click( function(event){
+      event.preventDefault();
+      $('.mob__menu').css('display', 'block').animate({opacity: 1}, 200); 
+  });
+  $('.modal_close-p, .mob__menu ul a').click( function(){
+    $('.mob__menu').css('display', 'none').animate({opacity: 0}, 200);
   });
 
 });

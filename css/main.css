@@ -175,10 +175,6 @@ fieldset {
       -webkit-transform: scale(1.2);
               transform: scale(1.2); }
 
-.col-4, .col-6 {
-  padding-right: 5px;
-  padding-left: 5px; }
-
 body {
   padding: 0rem 100px;
   background: #ffffff; }
@@ -263,6 +259,62 @@ button, .apartment__btn {
     width: 100%;
     -webkit-transition: 0s;
     transition: 0s; }
+
+.mob__menu {
+  display: none;
+  z-index: 998;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  color: #ffffff;
+  padding: 0 4.5rem;
+  padding-top: 70px;
+  background: rgba(232, 78, 14, 0.7); }
+  .mob__menu ul {
+    padding-top: 3rem;
+    padding-bottom: 1rem; }
+    .mob__menu ul li {
+      padding: 0.6rem 0; }
+    .mob__menu ul a {
+      font-size: 2.7rem;
+      color: #ffffff; }
+  .mob__menu .modal_close {
+    position: static;
+    width: 20px;
+    top: auto;
+    right: auto;
+    height: 20px;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0.5rem; }
+    .mob__menu .modal_close-p {
+      top: 80px;
+      position: absolute;
+      right: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  .mob__menu .mob-contact {
+    background: rgba(248, 172, 0, 0.3);
+    margin: 0 -4.5rem;
+    height: 100%;
+    padding: 3.5rem 4.5rem; }
+    .mob__menu .mob-contact p {
+      font-size: 1.2rem;
+      padding: 0.25rem 0; }
+    .mob__menu .mob-contact a {
+      color: #ffffff;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      display: block; }
 
 .logo__block {
   position: absolute; }
@@ -611,63 +663,56 @@ button, .apartment__btn {
 
 .display-1 {
   position: relative;
-  min-height: 100vh;
   height: 100vh; }
 
-.slider-first .slider-1 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6))), url("../img/Viz2.jpg") center;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("../img/Viz2.jpg") center;
-  background-size: cover; }
-
-.slider-first .slider-2 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6))), url("../img/MULER_VIZ.jpg") center;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("../img/MULER_VIZ.jpg") center;
-  background-size: cover; }
-
-.slider-first .slider__item {
-  position: relative;
+.slider-first {
   height: 100%; }
-
-.slider-first .slider__img {
-  min-height: 100vh;
-  height: 100vh; }
-
-.slider-first .slider__about {
-  position: absolute;
-  bottom: 4rem;
-  left: 5rem;
-  color: #ffffff;
-  max-width: 50rem; }
-  .slider-first .slider__about h1 {
-    line-height: 4.2rem;
-    font-weight: 700; }
-  .slider-first .slider__about h2 {
-    line-height: 2.7rem;
-    margin: 1.5rem 0; }
-  .slider-first .slider__about a {
-    display: inline-block; }
-
-.slider-first .slider__btn {
-  position: absolute;
-  bottom: 4rem;
-  right: 12rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .slider-first .slider__btn img {
-    margin: 0 1.75rem; }
-
-.slider-first .slider__icon {
-  text-align: center;
-  font-size: 0.7rem;
-  color: #ffffff;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-  .slider-first .slider__icon p {
-    margin-top: 0.6rem; }
-  .slider-first .slider__icon:hover img {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05); }
+  .slider-first .slider-1 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6))), url("../img/Viz2.jpg") center;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("../img/Viz2.jpg") center;
+    background-size: cover; }
+  .slider-first .slider-2 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6))), url("../img/MULER_VIZ.jpg") center;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6)), url("../img/MULER_VIZ.jpg") center;
+    background-size: cover; }
+  .slider-first .slider__item {
+    position: relative; }
+  .slider-first .slider__img {
+    height: 100vh; }
+  .slider-first .slider__about {
+    position: absolute;
+    bottom: 4rem;
+    left: 5rem;
+    color: #ffffff;
+    max-width: 50rem; }
+    .slider-first .slider__about h1 {
+      line-height: 4.2rem;
+      font-weight: 700; }
+    .slider-first .slider__about h2 {
+      line-height: 2.7rem;
+      margin: 1.5rem 0; }
+    .slider-first .slider__about a {
+      display: inline-block; }
+  .slider-first .slider__btn {
+    position: absolute;
+    bottom: 4rem;
+    right: 12rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .slider-first .slider__btn img {
+      margin: 0 1.75rem; }
+  .slider-first .slider__icon {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .slider-first .slider__icon p {
+      margin-top: 0.6rem; }
+    .slider-first .slider__icon:hover img {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05); }
 
 .slider__prev {
   background: #f8ac0a; }
@@ -709,7 +754,6 @@ button, .apartment__btn {
 
 .display-2 {
   position: relative;
-  min-height: 100vh;
   height: 100vh;
   background: url("../img/UTRO.png");
   padding: 200px 28.5rem 0 28.5rem;
@@ -816,7 +860,8 @@ button, .apartment__btn {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0.5rem 0; }
+    margin: 0.5rem 0;
+    padding: 1rem; }
   .info__name {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -824,10 +869,12 @@ button, .apartment__btn {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    font-weight: 700; }
+    font-weight: 700;
+    padding-bottom: 0.5rem; }
+  .info__location {
+    max-width: 75%; }
 
 .display-4 {
-  min-height: 100vh;
   height: 100vh;
   position: relative; }
   .display-4 .to-top {
@@ -864,43 +911,36 @@ button, .apartment__btn {
   .slider__content h1 {
     line-height: 4.2rem; }
 
-.slider-second .slider__img {
-  min-height: 100vh;
-  max-height: 100vh;
-  height: 100vh; }
-
-.slider-second .slider-1 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Kroliki.png") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Kroliki.png") center;
-  background-size: cover; }
-
-.slider-second .slider-2 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Layer6.jpg") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Layer6.jpg") center;
-  background-size: cover; }
-
-.slider-second .slider-3 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Devochka.jpg") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Devochka.jpg") center;
-  background-size: cover; }
-
-.slider-second .slider-4 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Silrada.jpg") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Silrada.jpg") center;
-  background-size: cover; }
-
-.slider-second .slider-5 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Detskie_Ruki.jpg") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Detskie_Ruki.jpg") center;
-  background-size: cover; }
-
-.slider-second .slider-6 .slider__img {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/LES.png") center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/LES.png") center;
-  background-size: cover; }
+.slider-second {
+  height: 100%; }
+  .slider-second .slider__img {
+    height: 100vh; }
+  .slider-second .slider-1 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Kroliki.png") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Kroliki.png") center;
+    background-size: cover; }
+  .slider-second .slider-2 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Layer6.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Layer6.jpg") center;
+    background-size: cover; }
+  .slider-second .slider-3 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Devochka.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Devochka.jpg") center;
+    background-size: cover; }
+  .slider-second .slider-4 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Silrada.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Silrada.jpg") center;
+    background-size: cover; }
+  .slider-second .slider-5 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/Detskie_Ruki.jpg") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/Detskie_Ruki.jpg") center;
+    background-size: cover; }
+  .slider-second .slider-6 .slider__img {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../img/LES.png") center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/LES.png") center;
+    background-size: cover; }
 
 .apartment {
-  min-height: 100vh;
   height: 100vh;
   position: relative; }
   .apartment .to-top {
@@ -933,12 +973,12 @@ button, .apartment__btn {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    min-height: 100%; }
+    height: 100%; }
     .apartment__item .price {
       position: absolute;
       left: 0;
       font-size: 1.3rem;
-      bottom: 0;
+      top: 110%;
       padding: 0.9rem 1.5rem;
       margin-left: 2rem; }
   .apartment-first {
@@ -968,6 +1008,8 @@ button, .apartment__btn {
     .apartment__kompl p {
       font-weight: 700;
       font-size: 1.3rem; }
+  .apartment .ploshcha {
+    display: none; }
   .apartment__metraz {
     text-align: left; }
     .apartment__metraz button {
@@ -981,6 +1023,8 @@ button, .apartment__btn {
   .apartment__rozp img {
     max-width: 20rem;
     max-height: 15rem; }
+  .apartment__rozp p {
+    display: none; }
   .apartment-second {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -988,7 +1032,8 @@ button, .apartment__btn {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 15rem 0 0; }
+    padding: 0 15rem 0 0;
+    position: relative; }
     .apartment-second .uvaga {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1008,9 +1053,14 @@ table .lifearea td {
 
 .developer {
   padding-left: 13.5rem;
-  min-height: 100vh;
   height: 100vh;
   position: relative; }
+  .developer__projects .col-lg-4 {
+    padding-right: 5px;
+    padding-left: 5px; }
+  .developer__projects .row {
+    margin-left: -5px;
+    margin-right: -5px; }
   .developer__info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1126,7 +1176,6 @@ table .lifearea td {
       width: 3rem; }
 
 .display-7 {
-  min-height: 100vh;
   height: 100vh;
   position: relative; }
   .display-7 .to-top {
@@ -1152,8 +1201,6 @@ table .lifearea td {
   -webkit-transform: translate3d(0, 0, 0); }
 
 .slider-third .slider__img {
-  min-height: 100vh;
-  max-height: 100vh;
   height: 100vh; }
 
 .slider-third .slider-1 .slider__img {
@@ -1638,7 +1685,11 @@ table .lifearea td {
     width: 70px;
     height: 70px; }
   .arrow {
-    right: -70px; }
+    right: -70px;
+    z-index: 99; }
+  .slider-arrow {
+    width: 70px;
+    height: 70px; }
   .display-2 {
     padding: 100px 14rem 0 14rem; }
   .advantages__title {
@@ -1685,25 +1736,135 @@ table .lifearea td {
       padding: 1rem 0.5rem; }
   .buttons__order {
     margin-left: 0.5rem;
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .apartment-first {
+    padding: 0 8rem 0 15rem; }
+  .developer-item {
+    height: 13rem; } }
 
-@media only screen and (max-device-width: 576px) {
-  html {
-    font-size: 11px; }
+@media only screen and (max-device-width: 1200px) {
+  .buttons__phone {
+    display: none; }
+  .slider-first .slider__about {
+    bottom: 6rem; }
+  .apartment__item {
+    padding: 60px 0rem 8rem 2rem; }
+    .apartment__item .price {
+      top: 110%; }
+  .apartment-first {
+    padding: 0 0 0 9rem; }
+  .apartment-second {
+    padding: 0 2rem; }
+  .apartment__kompl {
+    display: block;
+    text-align: left; }
+    .apartment__kompl button {
+      margin: 0;
+      margin-top: 1rem; }
+  .apartment .apartment__metraz td {
+    padding: 0.3rem 0.3rem; } }
+
+@media only screen and (max-device-width: 1024px) {
   body {
-    padding: 0rem; }
-  h1 {
-    font-size: 3.4rem; }
-  h2 {
-    font-size: 1.85rem; }
+    padding: 0rem 50px; }
+  .header {
+    width: calc(100% - 100px); }
+  .buttons__order {
+    display: none; }
+  .social-icon {
+    top: 70%;
+    right: 25px; }
+  .call {
+    bottom: 8rem;
+    right: 100px; }
+  .developerby {
+    bottom: 12rem;
+    -webkit-transform: translateX(-41%);
+            transform: translateX(-41%); }
+  .slider-first .slider__about {
+    left: 3rem;
+    bottom: 15rem;
+    max-width: 35rem; }
+    .slider-first .slider__about h2 {
+      margin: 2rem 0; }
+  .slider-first .slider__btn {
+    bottom: 8rem;
+    left: 2.5rem; }
+  .slider-first .slider-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem; }
+  .slider-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem; }
+  .arrow {
+    z-index: 99;
+    right: -50px; }
+  .display-2 {
+    padding: 100px 8rem 0 8rem; }
+  .advantages__item img {
+    max-width: 7rem; }
+  .advantages__item p {
+    font-size: 1.3rem; }
+  .advantages .apartment__btn {
+    bottom: 8rem; }
+  .apartment__item {
+    padding: 60px 0rem 15rem 2rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .apartment__item .price {
+      top: 110%;
+      left: 9rem; }
+  .apartment-first {
+    padding: 0 0 0 9rem; }
+  .apartment-second {
+    padding: 4rem 2rem 0 9rem; }
+  .apartment__kompl {
+    display: block;
+    text-align: left; }
+    .apartment__kompl button {
+      margin: 0;
+      margin-top: 1rem; }
+  .apartment__plan img {
+    max-width: 15rem; }
+  .apartment__metraz td {
+    padding: 0.3rem 0.3rem; }
+  .developer {
+    padding: 0; }
+    .developer-item {
+      height: 11rem;
+      margin: 15px 0; }
+    .developer__description {
+      padding-left: 11rem;
+      padding-top: 6rem;
+      display: block; }
+      .developer__description button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem; }
+    .developer__projects {
+      padding-top: 5rem; }
+  .footer {
+    padding: 2rem; }
+    .footer__addres {
+      max-width: 8rem; }
+    .footer-logo {
+      width: 10rem; } }
+
+@media only screen and (max-device-width: 769px) {
+  html {
+    font-size: 14px; }
   header {
     height: 6.5rem;
     background: #f8ac0a;
-    position: relative;
-    z-index: 700; }
+    position: fixed;
+    z-index: 700;
+    width: calc(100% - 100px); }
   .header {
     display: none; }
-  .logo__block, .developerby, .social-icon, .call {
+  .logo__block, .call {
     display: none; }
   .mob-header {
     display: -webkit-box;
@@ -1752,19 +1913,109 @@ table .lifearea td {
       width: 3rem; }
     .mob-header .menu__icon {
       width: 1.7rem; }
+  button, .apartment__btn {
+    font-size: 1.3rem;
+    padding: 1.1rem 2.3rem; }
+  .slider__about {
+    max-width: 28rem; }
+  .display-2 {
+    padding: 120px 5rem 0 5rem; }
+  .advantages__title {
+    margin-bottom: 2rem; }
+  .advantages__item {
+    max-width: 12rem;
+    width: 12rem;
+    padding: 1rem 0; }
+    .advantages__item img {
+      max-width: 8rem; }
+    .advantages__item p {
+      font-size: 1rem; }
+  .advantages .apartment__btn {
+    bottom: 8rem; }
+  .info {
+    top: 20%;
+    max-width: 18rem; }
+  .apartment__item {
+    padding: 90px 1rem; }
+    .apartment__item .price {
+      top: 110%;
+      left: 0; }
+  .apartment-first {
+    padding: 0; }
+  .apartment-second {
+    padding: 0;
+    padding-top: 4rem;
+    padding-right: 4rem; }
+  .apartment__kompl {
+    display: block;
+    text-align: left; }
+    .apartment__kompl button {
+      margin: 0;
+      margin-top: 1rem; }
+  .apartment__plan img {
+    max-width: 15rem; }
+  .apartment__metraz td {
+    padding: 0.3rem 0.5rem; }
+  .developer {
+    padding: 0;
+    padding-top: 7rem; }
+    .developer .row {
+      padding: 0; }
+    .developer__description {
+      padding: 2rem;
+      display: block; }
+      .developer__description button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 1rem; }
+    .developer__projects {
+      padding: 0; }
+    .developer__info p {
+      max-width: auto; }
+    .developer-item {
+      height: 12rem; }
+  .footer {
+    padding: 1rem; }
+    .footer__addres {
+      max-width: 8rem; }
+    .footer-logo {
+      width: 8rem; } }
+
+@media only screen and (max-device-width: 576px) {
+  html {
+    font-size: 11px; }
+  body {
+    padding: 0rem; }
+  h1 {
+    font-size: 3.4rem; }
+  h2 {
+    font-size: 1.85rem; }
+  header {
+    width: 100%; }
+  .logo__block, .developerby, .social-icon, .call {
+    display: none; }
   .arrow {
     display: none; }
+  button, .apartment__btn {
+    font-size: 1.3rem;
+    padding: 1.1rem 2.3rem; }
   .slider-first .slider__btn {
     display: none; }
   .slider-first .slider__about {
     left: 3rem;
-    bottom: 3rem; }
+    bottom: 7rem; }
   .display-2 {
-    padding: 3rem 5rem 0 5rem; }
+    padding: 9.3rem 5rem 0 5rem; }
   .apartment__btn {
     display: none; }
+  .advantages__item {
+    padding: 0.7rem 0; }
+    .advantages__item img {
+      max-width: 5rem; }
+    .advantages__item p {
+      margin-top: 0.5rem; }
   .info {
-    top: 5rem;
+    top: 8rem;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     left: 50%;
@@ -1779,8 +2030,116 @@ table .lifearea td {
     padding: 0 1.8rem; }
     .slider__content h3 {
       font-size: 1.2rem;
-      line-height: 1.5rem; }
+      line-height: 1.5rem;
+      padding: 0 2rem; }
     .slider__content h1 {
       font-size: 2.4rem;
-      line-height: 2.7rem;
-      padding: 0 1.8rem; } }
+      line-height: 2.7rem; }
+  .apartment table {
+    display: none; }
+  .apartment-first {
+    padding: 2rem;
+    padding-top: 4rem;
+    position: relative; }
+  .apartment .uvaga {
+    display: none; }
+  .apartment .price {
+    display: none; }
+  .apartment .completion__btn {
+    display: none; }
+  .apartment .ploshcha {
+    display: block;
+    font-weight: 400; }
+  .apartment__item {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0; }
+  .apartment__kompl p {
+    font-size: 2rem; }
+  .apartment__metraz {
+    width: 100%; }
+  .apartment__plan {
+    position: absolute;
+    top: 9rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: auto; }
+    .apartment__plan img {
+      position: static;
+      max-width: 17rem;
+      max-height: 21rem; }
+  .apartment__rozp {
+    padding-left: 2rem; }
+    .apartment__rozp p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: block; }
+    .apartment__rozp img {
+      margin: 0 auto; }
+  .apartment-second {
+    padding: 0 2rem 0 0;
+    padding-top: 22rem; }
+  .developer {
+    padding: 0;
+    padding-top: 7rem; }
+    .developer .row {
+      padding: 0; }
+    .developer__description {
+      padding: 0;
+      display: block;
+      text-align: center; }
+    .developer__info {
+      display: block; }
+      .developer__info p {
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+        padding: 1rem 2rem;
+        padding-top: 0; }
+      .developer__info div {
+        margin: 0; }
+      .developer__info a {
+        display: block;
+        margin-bottom: 1rem; }
+    .developer__projects {
+      padding: 0;
+      margin-top: 1rem; }
+      .developer__projects .col-6 {
+        padding-right: 1px;
+        padding-left: 1px; }
+      .developer__projects .row {
+        margin-left: -1px;
+        margin-right: -1px; }
+    .developer-item {
+      margin: 1px 0;
+      height: 9rem; }
+      .developer-item__information {
+        display: none; }
+      .developer-item__logo {
+        max-width: 10rem;
+        max-height: 5rem; }
+      .developer-item a {
+        padding: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+  .footer {
+    padding: 2rem 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center; }
+    .footer__phone-block {
+      text-align: center; }
+    .footer div {
+      padding: 0.5rem 0; }
+  .popup__call, .popup__video, .popup__document, .popup__completion {
+    width: 100%; } }
